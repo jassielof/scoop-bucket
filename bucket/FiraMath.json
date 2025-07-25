@@ -1,0 +1,62 @@
+{
+    "version": "0.3.4",
+    "description": "Fira Math is a sans-serif font with Unicode math support, based on FiraSans and FiraGO.",
+    "homepage": "https://github.com/firamath/firamath",
+    "license": "OFL-1.1",
+    "url": "https://github.com/firamath/firamath/releases/download/v0.3.4/FiraMath-Regular.otf",
+    "hash": "2028CBD3DD4D8C0CF1608520EB4759956A83A67931D7B6D8E7C313520186E35B",
+    "installer": {
+        "script": [
+            "$fontInstallDir = if ($global) { \"$env:windir\\Fonts\" } else { \"$env:LOCALAPPDATA\\Microsoft\\Windows\\Fonts\" }",
+            "if (-not $global) {",
+            "    New-Item $fontInstallDir -ItemType Directory -ErrorAction SilentlyContinue | Out-Null",
+            "}",
+            "$fontName = 'FiraMath-Regular.otf'",
+            "Copy-Item \"$dir\\$fontName\" -Destination $fontInstallDir",
+            "$registryRoot = if ($global) { \"HKLM\" } else { \"HKCU\" }",
+            "$registryKey = \"${registryRoot}:\\SOFTWARE\\Microsoft\\Windows NT\\CurrentVersion\\Fonts\"",
+            "New-ItemProperty -Path $registryKey -Name 'Fira Math (OpenType)' -Value (if ($global) { $fontName } else { \"$fontInstallDir\\$fontName\" }) -Force | Out-Null"
+        ]
+    },
+    "pre_uninstall": [
+        "$fontInstallDir = if ($global) { \"$env:windir\\Fonts\" } else { \"$env:LOCALAPPDATA\\Microsoft\\Windows\\Fonts\" }",
+        "try {",
+        "    Rename-Item \"$fontInstallDir\\FiraMath-Regular.otf\" \"$fontInstallDir\\FiraMath-Regular.otf\" -ErrorVariable LockError -ErrorAction Stop",
+        "} catch {",
+        "    Write-Host \"\"",
+        "    Write-Host \" Error \" -Background DarkRed -Foreground White -NoNewline",
+        "    Write-Host \"\"",
+        "    Write-Host \" Cannot uninstall 'FiraMath' font.\" -Foreground DarkRed",
+        "    Write-Host \"\"",
+        "    Write-Host \" Reason \" -Background DarkCyan -Foreground White -NoNewline",
+        "    Write-Host \"\"",
+        "    Write-Host \" The 'FiraMath' font is currently being used by another application,\" -Foreground DarkCyan",
+        "    Write-Host \" so it cannot be deleted.\" -Foreground DarkCyan",
+        "    Write-Host \"\"",
+        "    Write-Host \" Suggestion \" -Background Magenta -Foreground White -NoNewline",
+        "    Write-Host \"\"",
+        "    Write-Host \" Close all applications that are using 'FiraMath' font (e.g. vscode),\" -Foreground Magenta",
+        "    Write-Host \" and then try again.\" -Foreground Magenta",
+        "    Write-Host \"\"",
+        "    exit 1",
+        "}"
+    ],
+    "uninstaller": {
+        "script": [
+            "$fontInstallDir = if ($global) { \"$env:windir\\Fonts\" } else { \"$env:LOCALAPPDATA\\Microsoft\\Windows\\Fonts\" }",
+            "$registryRoot = if ($global) { \"HKLM\" } else { \"HKCU\" }",
+            "$registryKey = \"${registryRoot}:\\SOFTWARE\\Microsoft\\Windows NT\\CurrentVersion\\Fonts\"",
+            "Remove-ItemProperty -Path $registryKey -Name 'Fira Math (OpenType)' -Force -ErrorAction SilentlyContinue",
+            "Remove-Item \"$fontInstallDir\\FiraMath-Regular.otf\" -Force -ErrorAction SilentlyContinue",
+            "if ($cmd -eq \"uninstall\") {",
+            "    Write-Host \"The 'FiraMath' font has been uninstalled and will not be present after restarting your computer.\" -Foreground Magenta",
+            "}"
+        ]
+    },
+    "checkver": {
+        "github": "https://github.com/firamath/firamath"
+    },
+    "autoupdate": {
+        "url": "https://github.com/firamath/firamath/releases/download/v$version/FiraMath-Regular.otf"
+    }
+}
