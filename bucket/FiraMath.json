@@ -4,7 +4,7 @@
     "homepage": "https://github.com/firamath/firamath",
     "license": "OFL-1.1",
     "url": "https://github.com/firamath/firamath/releases/download/v0.3.4/FiraMath-Regular.otf",
-    "hash": "2028CBD3DD4D8C0CF1608520EB4759956A83A67931D7B6D8E7C313520186E35B",
+    "hash": "2028cbd3dd4d8c0cf1608520eb4759956a83a67931d7b6d8e7c313520186e35b",
     "installer": {
         "script": [
             "$fontInstallDir = if ($global) { \"$env:windir\\Fonts\" } else { \"$env:LOCALAPPDATA\\Microsoft\\Windows\\Fonts\" }",

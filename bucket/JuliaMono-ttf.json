@@ -4,7 +4,7 @@
     "homepage": "https://juliamono.netlify.app/",
     "license": "OFL-1.1",
     "url": "https://github.com/cormullion/juliamono/releases/download/v0.060/JuliaMono-ttf.zip",
-    "hash": "9BC3F393F014131F63FC12B7905DBA27B239535C6536BB61C0BBE2F7B6D91197",
+    "hash": "9bc3f393f014131f63fc12b7905dba27b239535c6536bb61c0bbe2f7b6d91197",
     "installer": {
         "script": [
             "$fontInstallDir = if ($global) { \"$env:windir\\Fonts\" } else { \"$env:LOCALAPPDATA\\Microsoft\\Windows\\Fonts\" }",
