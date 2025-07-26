@@ -1,7 +1,7 @@
 {
     "version": "0.060",
     "description": "JuliaMono is a monospaced typeface designed for programming in text editing environments that require a wide range of specialist and technical Unicode characters.",
-    "homepage": "https://github.com/cormullion/juliamono",
+    "homepage": "https://juliamono.netlify.app/",
     "license": "OFL-1.1",
     "url": "https://github.com/cormullion/juliamono/releases/download/v0.060/JuliaMono-ttf.zip",
     "hash": "9BC3F393F014131F63FC12B7905DBA27B239535C6536BB61C0BBE2F7B6D91197",

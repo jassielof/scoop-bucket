@@ -54,9 +54,7 @@
             "}"
         ]
     },
-    "checkver": {
-        "github": "https://github.com/firamath/firamath"
-    },
+    "checkver": "github",
     "autoupdate": {
         "url": "https://github.com/firamath/firamath/releases/download/v$version/FiraMath-Regular.otf"
     }
