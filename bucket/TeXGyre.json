@@ -4,7 +4,7 @@
     "homepage": "https://www.gust.org.pl/projects/e-foundry/tex-gyre",
     "license": "OFL-1.1",
     "url": "https://www.gust.org.pl/projects/e-foundry/tex-gyre/whole/tg2_501otf.zip",
-    "hash": "",
+    "hash": "D7F8BE5317BEC4E644CF16C5ABF876ABEEB83C43DBEC0CCB4EEE4516B73B1BBE",
     "installer": {
         "script": [
             "$currentBuildNumber = [int] (Get-ItemProperty \"HKLM:\\SOFTWARE\\Microsoft\\Windows NT\\CurrentVersion\").CurrentBuildNumber",

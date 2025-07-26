@@ -10,7 +10,13 @@
         "https://www.gust.org.pl/projects/e-foundry/tg-math/download/texgyretermes-math-1543.zip",
         "https://www.gust.org.pl/projects/e-foundry/tex-gyre-dejavu-math/download/texgyredejavu-math-1106.zip"
     ],
-    "hash": ["", "", "", "", ""],
+    "hash": [
+        "8F8DC6F52FF838201F581F20B4AB634508E6D4B1E2745FE5D6B7732E1DF73290",
+        "68A9C0CE195915334673960B13A281F24D31A8AE380454A0E35652DBA506D474",
+        "53560861144138E25F89F1F487126D21C81C5086364FFCF2C8E5E46E37EBBE00",
+        "5875B39D3987CBE4258E5933A2292FBECE870177053C5A8F495492769E2D4BB2",
+        "57D2FFBA9FD4871CFCDBB941AE1309FAC482F30E56EF7B78943E0F7F450AF5E1"
+    ],
     "installer": {
         "script": [
             "$currentBuildNumber = [int] (Get-ItemProperty \"HKLM:\\SOFTWARE\\Microsoft\\Windows NT\\CurrentVersion\").CurrentBuildNumber",
