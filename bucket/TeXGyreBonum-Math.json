@@ -1,22 +1,10 @@
 {
-    "version": "1.632",
-    "description": "TeX Gyre Math fonts for mathematical typesetting, including Bonum, Pagella, Schola, Termes, and DejaVu Math variants.",
+    "version": "1.005",
+    "description": "TeX Gyre Bonum Math font for mathematical typesetting.",
     "homepage": "https://www.gust.org.pl/projects/e-foundry/tg-math",
     "license": "OFL-1.1",
-    "url": [
-        "https://www.gust.org.pl/projects/e-foundry/tg-math/download/texgyrebonum-math-1005.zip",
-        "https://www.gust.org.pl/projects/e-foundry/tg-math/download/texgyrepagella-math-1632.zip",
-        "https://www.gust.org.pl/projects/e-foundry/tg-math/download/texgyreschola-math-1533.zip",
-        "https://www.gust.org.pl/projects/e-foundry/tg-math/download/texgyretermes-math-1543.zip",
-        "https://www.gust.org.pl/projects/e-foundry/tex-gyre-dejavu-math/download/texgyredejavu-math-1106.zip"
-    ],
-    "hash": [
-        "8F8DC6F52FF838201F581F20B4AB634508E6D4B1E2745FE5D6B7732E1DF73290",
-        "68A9C0CE195915334673960B13A281F24D31A8AE380454A0E35652DBA506D474",
-        "53560861144138E25F89F1F487126D21C81C5086364FFCF2C8E5E46E37EBBE00",
-        "5875B39D3987CBE4258E5933A2292FBECE870177053C5A8F495492769E2D4BB2",
-        "57D2FFBA9FD4871CFCDBB941AE1309FAC482F30E56EF7B78943E0F7F450AF5E1"
-    ],
+    "url": "https://www.gust.org.pl/projects/e-foundry/tg-math/download/texgyrebonum-math-1005.zip",
+    "hash": "8f8dc6f52ff838201f581f20b4ab634508e6d4b1e2745fe5d6b7732e1df73290",
     "installer": {
         "script": [
             "$currentBuildNumber = [int] (Get-ItemProperty \"HKLM:\\SOFTWARE\\Microsoft\\Windows NT\\CurrentVersion\").CurrentBuildNumber",
@@ -37,8 +25,6 @@
             "}",
             "$fontInstallDir = if ($global) { \"$env:windir\\Fonts\" } else { \"$env:LOCALAPPDATA\\Microsoft\\Windows\\Fonts\" }",
             "if (-not $global) {",
-            "    # Ensure user font install directory exists and has correct permission settings",
-            "    # See https://github.com/matthewjberger/scoop-nerd-fonts/issues/198#issuecomment-1488996737",
             "    New-Item $fontInstallDir -ItemType Directory -ErrorAction SilentlyContinue | Out-Null",
             "    $accessControlList = Get-Acl $fontInstallDir",
             "    $allApplicationPackagesAccessRule = New-Object System.Security.AccessControl.FileSystemAccessRule([System.Security.Principal.SecurityIdentifier]::new(\"S-1-15-2-1\"), \"ReadAndExecute\", \"ContainerInherit,ObjectInherit\", \"None\", \"Allow\")",
@@ -97,17 +83,14 @@
             "}"
         ]
     },
+    "architecture": {
+        
+    },
     "checkver": {
-        "url": "https://www.gust.org.pl/projects/e-foundry/tg-math",
-        "regex": "texgyrepagella-math-([\\d.]+)\\.zip"
+        "url": "https://www.gust.org.pl/projects/e-foundry/tg-math/download",
+        "regex": "TeX Gyre Bonum Math \\(OTF\\), version ([\\d.]+)\\."
     },
     "autoupdate": {
-        "url": [
-            "https://www.gust.org.pl/projects/e-foundry/tg-math/download/texgyrebonum-math-$version.zip",
-            "https://www.gust.org.pl/projects/e-foundry/tg-math/download/texgyrepagella-math-$version.zip",
-            "https://www.gust.org.pl/projects/e-foundry/tg-math/download/texgyreschola-math-$version.zip",
-            "https://www.gust.org.pl/projects/e-foundry/tg-math/download/texgyretermes-math-$version.zip",
-            "https://www.gust.org.pl/projects/e-foundry/tex-gyre-dejavu-math/download/texgyredejavu-math-$version.zip"
-        ]
+        "url": "https://www.gust.org.pl/projects/e-foundry/tg-math/download/texgyrebonum-math-$cleanVersion.zip"
     }
 }
