@@ -15,7 +15,8 @@
             "Copy-Item \"$dir\\$fontName\" -Destination $fontInstallDir",
             "$registryRoot = if ($global) { \"HKLM\" } else { \"HKCU\" }",
             "$registryKey = \"${registryRoot}:\\SOFTWARE\\Microsoft\\Windows NT\\CurrentVersion\\Fonts\"",
-            "New-ItemProperty -Path $registryKey -Name 'Fira Math (OpenType)' -Value (if ($global) { $fontName } else { \"$fontInstallDir\\$fontName\" }) -Force | Out-Null"
+            "$fontValue = if ($global) { $fontName } else { \"$fontInstallDir\\$fontName\" }",
+            "New-ItemProperty -Path $registryKey -Name 'Fira Math (OpenType)' -Value $fontValue -Force | Out-Null"
         ]
     },
     "pre_uninstall": [
