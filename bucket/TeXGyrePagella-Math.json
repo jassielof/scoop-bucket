@@ -85,9 +85,6 @@
             "}"
         ]
     },
-    "architecture": {
-        
-    },
     "checkver": {
         "url": "https://www.gust.org.pl/projects/e-foundry/tg-math/download",
         "regex": "TeX Gyre Pagella Math \\(OTF\\), version ([\\d.]+)\\."

@@ -83,9 +83,6 @@
             "}"
         ]
     },
-    "architecture": {
-        
-    },
     "checkver": {
         "url": "https://www.gust.org.pl/projects/e-foundry/tex-gyre-dejavu-math/download",
         "regex": "texgyredejavu-math-([\\d.]+)\\.zip"
