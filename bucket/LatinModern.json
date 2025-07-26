@@ -4,7 +4,7 @@
     "homepage": "https://www.gust.org.pl/projects/e-foundry/latin-modern",
     "license": "OFL-1.1",
     "url": "https://www.gust.org.pl/projects/e-foundry/latin-modern/download/lm2.004otf.zip",
-    "hash": "5B0236051D3728BE6616F1B274E3B910473875B5A3EF9382F0EF00384DDB161B",
+    "hash": "5b0236051d3728be6616f1b274e3b910473875b5a3ef9382f0ef00384ddb161b",
     "installer": {
         "script": [
             "$currentBuildNumber = [int] (Get-ItemProperty \"HKLM:\\SOFTWARE\\Microsoft\\Windows NT\\CurrentVersion\").CurrentBuildNumber",
