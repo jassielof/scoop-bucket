@@ -1,6 +1,6 @@
 {
     "version": "3.052",
-    "homepage": "https://adobe-fonts.github.io/source-sans/",
+    "homepage": "https://github.com/adobe-fonts/source-sans",
     "description": "Sans serif font family for user interface environments.",
     "url": "https://github.com/adobe-fonts/source-sans/archive/refs/tags/3.052R.zip",
     "hash": "8740ef8bee3a3144b3dbb8b673264bfc685dab944610b884b14e6146ded9a50a",
@@ -69,6 +69,6 @@
     },
     "checkver": "github",
     "autoupdate": {
-        "url": "https://github.com/adobe-fonts/source-sans/releases/download/$versionR/$versionR.zip",
+        "url": "https://github.com/adobe-fonts/source-sans/archive/refs/tags/$version.zip"
     }
 }

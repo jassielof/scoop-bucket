@@ -1,7 +1,7 @@
 {
-    "version": "2.042R-u1/1.062R-i/1.026R-vf",
+    "version": "2.042R-u%2F1.062R-i%2F1.026R-vf",
     "url": "https://github.com/adobe-fonts/source-code-pro/archive/refs/tags/2.042R-u/1.062R-i/1.026R-vf.zip",
-    "homepage": "https://adobe-fonts.github.io/source-code-pro/",
+    "homepage": "https://github.com/adobe-fonts/source-code-pro",
     "description": "Monospaced font family for user interface and coding environments.",
     "hash": "dd26ee6e4110b762149fef5454cb6a2fc42a0f2cd07a74b8cfc6a334a92427a6",
     "license": "OFL-1.1",
@@ -67,8 +67,13 @@
             "}"
         ]
     },
-    "checkver": "github",
+    "checkver": {
+        "github": "https://github.com/adobe-fonts/source-code-pro",
+        "regex": "(\\d+\\.\\d+R-u)/(\\d+\\.\\d+R-i)/(\\d+\\.\\d+R-vf)",
+        "replace": "$1%2F$2%2F$3",
+        "reverse": true
+    },
     "autoupdate": {
-        "url": "https://github.com/adobe-fonts/source-code-pro/releases/download/$versionR/$versionR.zip"
+        "url": "https://github.com/adobe-fonts/source-code-pro/archive/refs/tags/$version.zip"
     }
 }

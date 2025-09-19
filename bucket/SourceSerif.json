@@ -1,6 +1,6 @@
 {
     "version": "4.005",
-    "homepage": "https://adobe-fonts.github.io/source-serif/",
+    "homepage": "https://github.com/adobe-fonts/source-serif",
     "description": "Typeface for setting text in many sizes, weights, and languages. Designed to complement Source Sans.",
     "url": "https://github.com/adobe-fonts/source-serif/archive/refs/tags/4.005R.zip",
     "hash": "abdae4c2e880b920026d22eb3590fecc8554fc1b30a0b4263c36dc01ef3e31b4",
@@ -69,6 +69,6 @@
     },
     "checkver": "github",
     "autoupdate": {
-        "url": "https://github.com/adobe-fonts/source-serif/releases/download/$versionR/$versionR.zip"
+        "url": "https://github.com/adobe-fonts/source-serif/archive/refs/tags/$version.zip"
     }
 }
